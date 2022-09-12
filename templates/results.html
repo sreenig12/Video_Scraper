@@ -17,23 +17,46 @@
 <body>
 
   <div class="table-users">
-   <div class="header">Reviews</div>
+   <div class="header">YouTube Channel Analytics</div>
 
    <table cellspacing="0">
       <tr>
-         <th>Product</th>
-         <th>Name</th>
-         <th>Rating</th>
-         <th>Comment Heading</th>
-         <th width="230">Comments</th>
+         <th>ChannelName</th>
+         <th>ChannelSubscribers</th>
+         <th>ChannelViews</th>
+         <th>TotalVideos</th>
+          <th>ChannelId</th>
+         <th>VideoTitle</th>
+         <th>ChannelViews</th>
+         <th>VideoID</th>
+          <th>PublishedDate</th>
+         <th>Views</th>
+         <th>Likes</th>
+         <th>Comments</th>
+          <th>Thumbnails</th>
+         <th>VideoLink</th>
+         <th>ChannelViews</th>
+         <th>ChannelURL</th>
+         <!--<th width="230">Comments</th>-->
       </tr>
          {% for review in reviews %}
       <tr>
-          <td>{{review['Product']}}</td>
-         <td>{{review['Name']}}</td>
-         <td>{{review['Rating']}}</td>
-         <td>{{review['CommentHead']}}</td>
-         <td>{{review['Comment']}} </td>
+          <td>{{review['ChannelName']}}</td>
+         <td>{{review['Channel_Subscribers']}}</td>
+         <td>{{review['Channel_Views']}}</td>
+         <td>{{review['Total_videos']}}</td>
+         <td>{{review['ChannelId']}} </td>
+          <td>{{review['Video_Title']}}</td>
+         <td>{{review['Channel_Views']}}</td>
+         <td>{{review['Video_id']}}</td>
+         <td>{{review['Published_date']}}</td>
+         <td>{{review['Views']}} </td>
+          <td>{{review['Likes']}}</td>
+         <td>{{review['Comments']}}</td>
+         <td><a href="{{review['Thumbnails']}}" target="_blank">{{review['Thumbnails']}}</a></td>
+         <td><a href="{{review['VideoLink']}}" target="_blank">{{review['VideoLink']}}</a></td>
+         <td>{{review['Channel_Views']}}</td>
+          <td><a href="{{review['Channel_URL']}}" target="_blank">{{review['Channel_URL']}}</a></td>
        {% endfor %}
    </table>
 </div>
